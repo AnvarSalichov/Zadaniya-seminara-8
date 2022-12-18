@@ -43,24 +43,46 @@ void PrintArray(int[,] array)
     }
 }
 
+// void SelectionSort(int[,] array)     
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int k = 0; k < array.GetLength(1) - 1; k++)   
+//         {
+//             for (int j = 0; j < array.GetLength(1) - 1; j++)
+//             {
+//                 if (array[i, j] < array[i, j + 1])
+//                 {
+//                     int temp = array[i, j+1];
+//                     array[i, j + 1] = array[i, j];
+//                     array[i, j] = temp;
+//                 }
+//             }
+//         }
+//     }
+// }
+
 void SelectionSort(int[,] array)     
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
-        for (int k = 0; k < array.GetLength(1) - 1; k++)   
+        for (int m = 0; m < array.GetLength(1) - 1; m++)
         {
-            for (int j = 0; j < array.GetLength(1) - 1; j++)
+        int maxPosition = m;
+        for (int j = m + 1; j < array.GetLength(1); j++)
+        {
+            if(array[i,j] > array[i,maxPosition]) 
             {
-                if (array[i, j] < array[i, j + 1])
-                {
-                    int temp = array[i, j+1];
-                    array[i, j + 1] = array[i, j];
-                    array[i, j] = temp;
-                }
+                maxPosition = j;
             }
         }
+        int temporary = array[i,m];
+        array[i,m] = array[i,maxPosition];
+        array[i,maxPosition] = temporary;
+        }   
     }
 }
+
 Console.WriteLine("Массив с рандомными числами: ");
 FillArray(matrix);
 PrintArray(matrix);
