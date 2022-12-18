@@ -62,23 +62,23 @@ void PrintArray(int[,] array)
 //     }
 // }
 
-void SelectionSort(int[,] array)     
+void SelectionSort(int[,] array)                 
 {
-    for (int i = 0; i < array.GetLength(0); i++)
+    for (int i = 0; i < array.GetLength(0); i++)   // цикл-cчетчик по количеству строк массива
     {
-        for (int m = 0; m < array.GetLength(1) - 1; m++)
+        for (int m = 0; m < array.GetLength(1) - 1; m++)  //цикл-счетчик вдоль строки по количеству столбцов массива, уменьшенному на 1 (из-за int maxPosition = m ) 
         {
         int maxPosition = m;
-        for (int j = m + 1; j < array.GetLength(1); j++)
+        for (int n = m + 1; n < array.GetLength(1); n++)   // цикл-счетчик для проверки задаваемого условия по количеству столбцов массива (элементов строки) 
         {
-            if(array[i,j] > array[i,maxPosition]) 
+            if(array[i,n] > array[i,maxPosition])    // задаваемое условие (в данном случае сравнение на определение большего значения)
             {
-                maxPosition = j;
+                maxPosition = n;                     // определение индекса  элемента в строке с максимальным значением в проверяемой строке (определение номера его столбца)
             }
         }
-        int temporary = array[i,m];
-        array[i,m] = array[i,maxPosition];
-        array[i,maxPosition] = temporary;
+        int temporary = array[i,m];          // введение временной переменной для перестановки элементов массива (с внесением в эту переменную элемента строки i с индексом m)
+        array[i,m] = array[i,maxPosition];   // перестановка элемента с максимальным значением в строке на начальную позицию m
+        array[i,maxPosition] = temporary;   // перестановка элемента из временной переменной на освободившуюся позицию с индексом maxPosition
         }   
     }
 }
