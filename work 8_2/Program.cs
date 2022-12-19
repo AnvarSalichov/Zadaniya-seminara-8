@@ -66,5 +66,5 @@ return rowsMin;
 
 FillArray(matrix);
 PrintArray(matrix);
-SumNum(matrix);
-Console.WriteLine("Номер строки с наименьшей суммой элементов: "+ SumNum(matrix));
+
+Console.WriteLine("Номер строки с наименьшей суммой элементов: "+SumNum(matrix));
