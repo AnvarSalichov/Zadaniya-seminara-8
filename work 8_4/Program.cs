@@ -32,9 +32,9 @@ for (int i = 0; i < ArrayThree.GetLength(0); i++)   // параметр x
             n++;
             Console.Write($"{ArrayThree[i, j, k]}({i},{j},{k}) ");   // Выводим на печать трехмерный массив
         }
+        //Console.WriteLine();     // для вывода построчно (как в условии)
     }
-    Console.WriteLine();     // для вывода построчно 
+    Console.WriteLine();     // для вывода построчно (достаточно)
 }
 
-
-Console.WriteLine();
+Console.WriteLine(); // для красоты
