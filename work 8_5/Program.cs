@@ -42,13 +42,13 @@ for (int j = 1; j <= 2; j++)
 array[2, 1] = n;
 
 
-void PrintMatrix(int[,] array)               // создаем метод печати массива
+void PrintMatrix(int[,] arr)               // создаем метод печати массива
 {
-    for (int i = 0; i < array.GetLength(0); i++)
+    for (int i = 0; i < arr.GetLength(0); i++)
     {
-        for (int j = 0; j < array.GetLength(1); j++)
+        for (int j = 0; j < arr.GetLength(1); j++)
         {
-            Console.Write(array[i, j]+ " ");
+            Console.Write(arr[i, j]+ " ");
         }
         Console.WriteLine();
     }
