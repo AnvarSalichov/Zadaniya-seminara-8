@@ -7,11 +7,11 @@
 // 26(1,0,1) 55(1,1,1)
 
 Console.WriteLine("Введите параметры трехмерного массива");
-Console.WriteLine("Введите число x: ");
+Console.WriteLine("введите число элементов по оси X: ");
 int x = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите число y:");
+Console.WriteLine("введите число элементов по оси Y:");
 int y = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите число z: ");
+Console.WriteLine("введите число элементов по оси Z: ");
 int z = Convert.ToInt32(Console.ReadLine());
 
 if ((x * y * z) > 90)                               //Проверка на двузначность для координат (от 10 до 99)
@@ -33,5 +33,8 @@ for (int i = 0; i < ArrayThree.GetLength(0); i++)   // параметр x
             Console.Write($"{ArrayThree[i, j, k]}({i},{j},{k}) ");   // Выводим на печать трехмерный массив
         }
     }
+    Console.WriteLine();     // для вывода построчно 
 }
 
+
+Console.WriteLine();
